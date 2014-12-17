@@ -1,0 +1,19 @@
+dependencies {
+	compile "io.netty:netty-all:5.0.0.Alpha1"
+	compile "log4j:log4j:1.2.17" 
+	compile "org.apache.httpcomponents:httpmime:4.3.4"
+	compile "mysql:mysql-connector-java:5.1.30" 
+
+	compile fileTree(dir: 'lib', include: 'rocksdbjni.jar')
+	compile fileTree(dir: 'lib', include: 'librocksdbjni.so')
+
+	testCompile group: 'junit', name: 'junit', version: '4.11'
+}
+
+tasks.withType(Test) {
+	systemProperty "java.library.path", "lib"
+}
+
+jar {
+	from "src/main/java/log4j.properties"
+}

@@ -1,0 +1,106 @@
+mysqlStop
+echo $USERPASS | ssh -t -t $USERNAME@$REMOTEHOST "sudo cp $CONFIGSFOLDER/bp1.cnf /etc/my.cnf"
+mysqlStart
+
+executeMysqlExperiment mid
+executeProxyExperiment 100 100 mid
+executeProxyExperiment 200 100 mid
+executeProxyExperiment 200 150 mid
+executeProxyExperiment 200 200 mid
+
+echo $USERPASS | ssh -t -t $USERNAME@$REMOTEHOST "sudo cp -rp $RESULTFOLDER $WORKFOLDER/bp1Results"
+echo $USERPASS | ssh -t -t $USERNAME@$REMOTEHOST "sudo rm $RESULTFOLDER/*"
+
+mysqlStop
+echo $USERPASS | ssh -t -t $USERNAME@$REMOTEHOST "sudo cp $CONFIGSFOLDER/bp2.cnf /etc/my.cnf"
+mysqlStart
+
+executeMysqlExperiment mid
+executeProxyExperiment 200 100 mid
+
+echo $USERPASS | ssh -t -t $USERNAME@$REMOTEHOST "sudo cp -rp $RESULTFOLDER $WORKFOLDER/bp2Results"
+echo $USERPASS | ssh -t -t $USERNAME@$REMOTEHOST "sudo rm $RESULTFOLDER/*"
+
+mysqlStop
+echo $USERPASS | ssh -t -t $USERNAME@$REMOTEHOST "sudo cp $CONFIGSFOLDER/bp4.cnf /etc/my.cnf"
+mysqlStart
+
+executeMysqlExperiment mid
+executeProxyExperiment 200 100 mid
+
+echo $USERPASS | ssh -t -t $USERNAME@$REMOTEHOST "sudo cp -rp $RESULTFOLDER $WORKFOLDER/bp4Results"
+echo $USERPASS | ssh -t -t $USERNAME@$REMOTEHOST "sudo rm $RESULTFOLDER/*"
+
+mysqlStop
+echo $USERPASS | ssh -t -t $USERNAME@$REMOTEHOST "sudo cp $CONFIGSFOLDER/bp8.cnf /etc/my.cnf"
+mysqlStart
+
+executeMysqlExperiment mid
+executeProxyExperiment 200 100 mid
+
+echo $USERPASS | ssh -t -t $USERNAME@$REMOTEHOST "sudo cp -rp $RESULTFOLDER $WORKFOLDER/bp8Results"
+echo $USERPASS | ssh -t -t $USERNAME@$REMOTEHOST "sudo rm $RESULTFOLDER/*"
+
+mysqlStop
+echo $USERPASS | ssh -t -t $USERNAME@$REMOTEHOST "sudo cp $CONFIGSFOLDER/spin8.cnf /etc/my.cnf"
+mysqlStart
+
+executeMysqlExperiment mid
+executeProxyExperiment 200 100 mid
+
+echo $USERPASS | ssh -t -t $USERNAME@$REMOTEHOST "sudo cp -rp $RESULTFOLDER $WORKFOLDER/spin8Results"
+echo $USERPASS | ssh -t -t $USERNAME@$REMOTEHOST "sudo rm $RESULTFOLDER/*"
+
+mysqlStop
+echo $USERPASS | ssh -t -t $USERNAME@$REMOTEHOST "sudo cp $CONFIGSFOLDER/spin16.cnf /etc/my.cnf"
+mysqlStart
+
+executeMysqlExperiment mid
+executeProxyExperiment 200 100 mid
+
+echo $USERPASS | ssh -t -t $USERNAME@$REMOTEHOST "sudo cp -rp $RESULTFOLDER $WORKFOLDER/spin16Results"
+echo $USERPASS | ssh -t -t $USERNAME@$REMOTEHOST "sudo rm $RESULTFOLDER/*"
+
+mysqlStop
+echo $USERPASS | ssh -t -t $USERNAME@$REMOTEHOST "sudo cp $CONFIGSFOLDER/spin24.cnf /etc/my.cnf"
+mysqlStart
+
+executeMysqlExperiment mid
+executeProxyExperiment 200 100 mid
+
+echo $USERPASS | ssh -t -t $USERNAME@$REMOTEHOST "sudo cp -rp $RESULTFOLDER $WORKFOLDER/spin24Results"
+echo $USERPASS | ssh -t -t $USERNAME@$REMOTEHOST "sudo rm $RESULTFOLDER/*"
+
+
+mysqlStop
+echo $USERPASS | ssh -t -t $USERNAME@$REMOTEHOST "sudo cp $CONFIGSFOLDER/thr8.cnf /etc/my.cnf"
+mysqlStart
+
+executeMysqlExperiment mid
+executeProxyExperiment 200 100 mid
+
+echo $USERPASS | ssh -t -t $USERNAME@$REMOTEHOST "sudo cp -rp $RESULTFOLDER $WORKFOLDER/thr8Results"
+echo $USERPASS | ssh -t -t $USERNAME@$REMOTEHOST "sudo rm $RESULTFOLDER/*"
+
+mysqlStop
+echo $USERPASS | ssh -t -t $USERNAME@$REMOTEHOST "sudo cp $CONFIGSFOLDER/thr16.cnf /etc/my.cnf"
+mysqlStart
+
+executeMysqlExperiment mid
+executeProxyExperiment 200 100 mid
+
+echo $USERPASS | ssh -t -t $USERNAME@$REMOTEHOST "sudo cp -rp $RESULTFOLDER $WORKFOLDER/thr16Results"
+echo $USERPASS | ssh -t -t $USERNAME@$REMOTEHOST "sudo rm $RESULTFOLDER/*"
+
+mysqlStop
+echo $USERPASS | ssh -t -t $USERNAME@$REMOTEHOST "sudo cp $CONFIGSFOLDER/final.cnf /etc/my.cnf"
+mysqlStart
+
+executeMysqlExperiment mid
+executeProxyExperiment 100 100 mid
+executeProxyExperiment 200 100 mid
+executeProxyExperiment 200 150 mid
+executeProxyExperiment 200 200 mid
+
+echo $USERPASS | ssh -t -t $USERNAME@$REMOTEHOST "sudo cp -rp $RESULTFOLDER $WORKFOLDER/finalConfResults"
+echo $USERPASS | ssh -t -t $USERNAME@$REMOTEHOST "sudo rm $RESULTFOLDER/*"

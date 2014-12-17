@@ -1,0 +1,32 @@
+Multi-tenant benchmarking tool.
+Copyright 2014 LinkedIn Corporation
+
+This product includes software developed by
+LinkedIn Corporation (www.linkedin.com).
+
+In addition, this product includes software 
+developed by:
+
+JUnit (http://www.junit.org/)
+Copyright 2002-2014 JUnit.
+License Common Public License v1.0.
+
+Apache log4j (http://logging.apache.org/log4j)
+Copyright 1999-2014 Apache Software Foundation.
+License Apache Software License v2.0.
+
+Netty (http://netty.io/)
+Copyright 2014 The Netty Project
+License Apache Software License v2.0.
+
+rocksdbjni (https://github.com/fusesource/rocksdbjni)
+Copyright 2011 FuseSource Corp.
+New BSD License
+
+Yahoo! Cloud Serving Benchmark (https://github.com/brianfrankcooper/YCSB)
+Copyright 2010 Yahoo! Inc. 
+License Apache Software License v2.0.
+
+MySQL Connector/J (http://dev.mysql.com/downloads/connector/j)
+Copyright 2014 Oracle Inc. 
+License GPL v2.0.

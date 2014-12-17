@@ -1,0 +1,8 @@
+dependencies {
+	compile "log4j:log4j:1.2.17" 
+    	compile "mysql:mysql-connector-java:5.1.30"
+
+	compile (project(":perf-tool-core"))
+
+	testCompile group: 'junit', name: 'junit', version: '4.11'
+}

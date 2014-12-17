@@ -1,0 +1,5 @@
+include 'mt-proxy'
+include 'perf-tool-core'
+include 'perf-tool-mysql'
+include 'perf-tool-proxy'
+include 'perf-tool-rocksdb'

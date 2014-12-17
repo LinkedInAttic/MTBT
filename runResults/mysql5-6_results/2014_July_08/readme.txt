@@ -1,0 +1,15 @@
+- used memhog 40gb
+- core distro:
+	- 12 to Mysql
+	- 4 to perf-tool
+	- 8 to proxy
+- common mysql changes in all:
+	- innodb_flush_neighbors = 0
+	- innodb_stats_auto_recalc = OFF
+	- sync_binlog = 0
+	- performance schema = OFF
+- query distribution is uniform
+- ran for an hour
+- 2 mid-qps goes crazy between 0:30-0:45. 
+
+- source code version number: c0c6863db4fa70fa7a0ac90c366cf3b1aeebcf4d

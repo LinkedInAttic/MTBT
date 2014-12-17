@@ -1,0 +1,10 @@
+dependencies {
+	compile "log4j:log4j:1.2.17" 
+
+	testCompile group: 'junit', name: 'junit', version: '4.11'
+}
+
+jar {
+	from "src/main/java/log4j.properties"
+	from "src/main/java/workPlan.xsd"
+}

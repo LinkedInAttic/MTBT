@@ -1,0 +1,12 @@
+subprojects {
+	apply plugin: 'java'
+  
+	repositories {
+		mavenCentral()
+	}
+
+	task copyLibs(type: Copy) {
+		from configurations.runtime
+		into "otherLibs"
+	}
+}

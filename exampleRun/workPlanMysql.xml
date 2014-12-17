@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<workPlan>
+	<property name="work.host" value="localhost"/>
+	<property name="work.port" value="3306"/>
+	<property name="work.runTime" value="10"/>
+	<property name="work.gran" value="2"/>
+	<property name="work.histogramSize" value="100"/>
+	<property name="work.status.period" value="2"/>
+	<property name="work.databaseClass" value="com.linkedin.multitenant.db.MysqlDatabase"/>
+	<property name="work.exporterClass" value="com.linkedin.multitenant.exporter.GoogleVisualizerExporter"/>
+	<property name="mysql.userName" value="perftool"/>
+	<property name="mysql.userPass" value="perftool"/>
+	<job>
+		<property name="job.name" value="job-1"/>
+		<property name="mysql.dbName" value="db1"/>
+		<property name="mysql.tableName" value="tab1"/>
+		<property name="mysql.keyCol" value="keyCol"/>
+		<property name="mysql.valCol" value="valCol"/>
+		<property name="job.rowCount" value="1000"/>
+		<property name="job.threads" value="5"/>
+		<property name="job.valueSize" value="100"/>
+		<property name="job.valueSize.dist" value="constant"/>
+		<property name="job.targetThr" value="10"/>
+		<property name="job.insertRate" value="0.25"/>
+		<property name="job.readRate" value="0.25"/>
+		<property name="job.deleteRate" value="0.25"/>
+		<property name="job.updateRate" value="0.25"/>
+	</job>
+	<job>
+		<property name="job.name" value="job-2"/>
+		<property name="mysql.dbName" value="db2"/>
+		<property name="mysql.tableName" value="tab1"/>
+		<property name="mysql.keyCol" value="keyCol"/>
+		<property name="mysql.valCol" value="valCol"/>
+		<property name="job.rowCount" value="3000"/>
+		<property name="job.threads" value="10"/>
+		<property name="job.valueSize" value="100"/>
+		<property name="job.valueSize.dist" value="constant"/>
+		<property name="job.targetThr" value="10"/>
+		<property name="job.insertRate" value="0.25"/>
+		<property name="job.readRate" value="0.25"/>
+		<property name="job.deleteRate" value="0.25"/>
+		<property name="job.updateRate" value="0.25"/>
+	</job>
+</workPlan>

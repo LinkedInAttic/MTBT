@@ -1,0 +1,15 @@
+- used memhog 40gb
+- core distro:
+	- 12 to Mysql
+	- 4 to perf-tool
+	- 8 to proxy
+- use mysql 5.5 linkedin bundle.
+- common mysql changes in all:
+	- innodb_flush_neighbor_pages = 0
+- query distribution is uniform
+- ran for an hour
+- 2 mid-qps goes crazy between 0:30-0:45. 
+- 5 threads/job
+- changed throttling strategy
+
+- source code version number: 933fa2cc9c33ace6b4c5f9c168ea651bc1b6be91

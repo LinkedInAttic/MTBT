@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<xs:complexType name="propertyType">
+		<xs:attribute name="name" type="xs:string"/>
+		<xs:attribute name="value" type="xs:string"/>
+	</xs:complexType>
+
+	<xs:complexType name="changeType">
+		<xs:attribute name="at" type="xs:string"/>
+		<xs:attribute name="to" type="xs:string"/>
+	</xs:complexType>
+
+	<xs:complexType name="timelineType">
+		<xs:sequence>
+			<xs:element name="change" type="changeType" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="jobType">
+		<xs:sequence>
+			<xs:element name="property" type="propertyType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="timeline" type="timelineType" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="workPlanType">
+		<xs:sequence>
+			<xs:element name="property" type="propertyType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="job" type="jobType" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:element name="workPlan" type="workPlanType"/>
+
+</xs:schema>
