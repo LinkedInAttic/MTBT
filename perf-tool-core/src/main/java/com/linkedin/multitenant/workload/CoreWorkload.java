@@ -95,7 +95,7 @@ public class CoreWorkload implements Workload
       _LOG.debug("Number of rows for job " + jobName + " is " + rowCount);
       _rowsResponsible = rowCount / numberOfWorkers;
       _LOG.debug("Thread " + _id + " for job " + jobName + " is responsible for " + _rowsResponsible + " rows");
-      _transactionInsertKeyGen = new CounterGenerator(rowCount);
+      _transactionInsertKeyGen = new CounterGenerator(_rowsResponsible);
     }
     else
     {
